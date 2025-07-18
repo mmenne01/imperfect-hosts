@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Band Lands Hand Truck Sponsorship"
 section: secondary
 summary: "Imperfect Hosts receives equipment upgrade from Ambidextrous hand trucks after president attends gig"
