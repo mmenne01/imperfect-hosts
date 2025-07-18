@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Imperfect Hosts Times</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Georgia:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.5;
+            color: #121212;
+            background-color: #fff;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Section */
+        .header {
+            border-bottom: 4px double #000;
+            padding: 20px 0;
+            margin-bottom: 0;
+        }
+
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 11px;
+            color: #666;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e2e2e2;
+        }
+
+        .main-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #e2e2e2;
+            margin-bottom: 20px;
+        }
+
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 40px;
+        }
+
+        .main-nav li {
+            position: relative;
+        }
+
+        .main-nav a {
+            color: #121212;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 8px 16px;
+            border-radius: 3px;
+            transition: all 0.2s ease;
+            display: block;
+        }
+
+        .main-nav a:hover {
+            background-color: #f8f8f8;
+            color: #326891;
+            text-decoration: underline;
+        }
+
+        .main-nav a:active {
+            background-color: #326891;
+            color: #fff;
+        }
+
+        .weather-date {
+            font-size: 11px;
+            color: #666;
+        }
+
+        .subscription-info {
+            font-size: 11px;
+            color: #326891;
+            text-decoration: underline;
+        }
+
+        .masthead-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .masthead {
+            font-family: 'Playfair Display', serif;
+            font-size: 62px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            color: #000;
+            margin-bottom: 5px;
+            text-shadow: none;
+        }
+
+        .publication-info {
+            font-size: 11px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .tagline {
+            font-size: 14px;
+            font-family: 'Playfair Display', serif;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .main-content {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .left-column {
+            flex: 3;
+            padding-right: 20px;
+        }
+
+        .right-column {
+            flex: 1;
+        }
+
+        .lead-story {
+            margin-bottom: 30px;
+        }
+
+        .lead-headline {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .lead-summary {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .byline {
+            font-size: 12px;
+            margin-bottom: 15px;
+            color: #666;
+        }
+
+        .story-headline {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .story-summary, .story-text {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .sidebar-headline {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .sidebar-story {
+            margin-bottom: 20px;
+        }
+
+        .sidebar-story-headline {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .sidebar-story-text {
+            font-size: 14px;
+        }
+
+        .bottom-stories {
+            margin-top: 40px;
+            border-top: 1px solid #e2e2e2;
+            padding-top: 20px;
+        }
+
+        .bottom-story {
+            margin-bottom: 20px;
+        }
+
+        .bottom-headline {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .bottom-text {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+        }
+
+        /* Print-like styling */
+        .section-label {
+            font-size: 10px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="top-nav">
+                <div class="weather-date">Tuesday, July 15, 2025 | Today's Paper | Video | Most Popular</div>
+                <div class="subscription-info">Subscribe for $0.000/week</div>
+            </div>
+
+            <div class="masthead-container">
+                <h1 class="masthead">The Imperfect Hosts Times</h1>
+                <div class="publication-info">VOL. I . . . No. 1 © Imhosts LLC 7/15/2025</div>
+                <div class="tagline">News for working musicians Published almost weekly.</div>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#band-info">Band Info</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#music">Music</a></li>
+                    <li><a href="#dates">Dates</a></li>
+                </ul>
+            </nav>
+
+            <div class="date-weather-bar">
+                <div class="date-info">Tuesday, July 15, 2025</div>
+                <div class="weather-info">Music City | 72°F</div>
+                <div class="price-info">Late Edition | $0.000</div>
+            </div>
+        </header>
+
+        {{ content }}
+    </div>
+</body>
+</html>

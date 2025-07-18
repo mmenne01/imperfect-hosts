@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<main class="main-content">
+    <article class="lead-story">
+        <h2 class="lead-headline">{{ page.title }}</h2>
+        {% if page.summary %}
+        <p class="lead-summary">{{ page.summary }}</p>
+        {% endif %}
+        {% if page.byline %}
+        <p class="byline">{{ page.byline }}</p>
+        {% endif %}
+        <div class="article-content">
+            {{ content }}
+        </div>
+    </article>
+</main>
