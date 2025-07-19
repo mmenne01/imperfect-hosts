@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Historic Building Becomes Studio"
 section: secondary
 summary: "Imperfect Hosts signs lease for mid-1800s recording space"

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Band Vocalist Creates New Scale During Live Performance"
 section: lead
 summary: "Local musician credited with developing unique harmonic tones that captivated audiences at Friday night show"

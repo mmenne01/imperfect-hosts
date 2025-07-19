@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Club Forces Outdoor Winter Shows"
 section: secondary
 summary: "Local venue accused of scheduling performances in freezing weather"

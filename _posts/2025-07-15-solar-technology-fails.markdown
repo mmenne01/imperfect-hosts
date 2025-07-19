@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Solar Technology Fails for Local Band"
 section: secondary
 summary: "California group abandons green energy experiment for stage amplifiers"

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Super Vacuum Toilet Installed"
 section: sidebar
 date: 2025-07-15 00:00:00 -0500

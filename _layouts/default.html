@@ -401,16 +401,7 @@
             </div>
         </header>
 
-        {% if page.collection == "posts" %}
-        <article class="lead-story">
-            <h1 class="lead-headline">{{ page.title }}</h1>
-            <div class="article-content">
-                {{ content }}
-            </div>
-        </article>
-        {% else %}
         {{ content }}
-        {% endif %}
     </div>
 </body>
 </html>

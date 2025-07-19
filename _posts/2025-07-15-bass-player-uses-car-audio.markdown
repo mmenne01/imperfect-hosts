@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Bass Player Uses 30,000 Watt Car Audio"
 section: bottom
 date: 2025-07-15 00:00:00 -0500

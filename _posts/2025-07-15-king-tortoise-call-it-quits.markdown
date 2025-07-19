@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "King Tortoise and the Hares Call It Quits"
 section: bottom
 date: 2025-07-15 00:00:00 -0500
