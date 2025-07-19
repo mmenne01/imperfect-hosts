@@ -1,3 +1,6 @@
+---
+layout: null
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -403,101 +406,51 @@
 
         <main class="main-content">
             <div class="left-column">
+{% assign lead_posts = site.posts | where:"section","lead" %}
+{% for post in lead_posts %}
                 <article class="lead-story">
-                    <h2 class="lead-headline">Band Vocalist Creates New Scale During Live Performance</h2>
-                    <p class="lead-summary">Local musician credited with developing unique harmonic tones that captivated audiences at Friday night show</p>
-                    <p class="byline">By Music Staff Reporter</p>
+                    <h2 class="lead-headline"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                    <p class="lead-summary">{{ post.summary }}</p>
+                    <p class="byline">{{ post.byline }}</p>
                     <div class="article-content">
-                        <p>It was a very special night for a local band as their lead vocalist created a new scale while singing. Listeners were treated to the performance of a lifetime last Friday night. Imperfect hosts sources advise that the lead vocalist was constantly creating new "harmonic tones" throughout the performance.</p>
-                        <p>Although this was not a first in music, singer is credited with a consistent special use of new scales; these included notes slightly above or below chord roots. According to Asian born guitarist "Wy Tune", the vocalist has had the special talent since joining early last year.</p>
-                        <p>The club owner where the event occurred suggested that it was hard to observe the special "harmonic tones" as the instruments were very loud; he was confident though that the new scales were indeed created.</p>
+                        {{ post.excerpt | strip_html }}<a href="{{ post.url }}">…</a>
                     </div>
                 </article>
-
+{% endfor %}
                 <section class="secondary-stories">
+{% assign secondary_posts = site.posts | where:"section","secondary" %}
+{% for post in secondary_posts %}
                     <article class="story">
-                        <h3 class="story-headline">Band Lands Hand Truck Sponsorship</h3>
-                        <p class="story-summary">Imperfect Hosts receives equipment upgrade from Ambidextrous hand trucks after president attends gig</p>
-                        <p class="story-text">Imperfect hosts band is delighted to announce that it has landed a new sponsorship: "Ambidextrous hand trucks". The president noticed the old hand truck stage right and recognized it as a type I hand truck not made since the 1970's.</p>
+                        <h3 class="story-headline"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                        <p class="story-summary">{{ post.summary }}</p>
+                        <p class="story-text">{{ post.excerpt | strip_html }}<a href="{{ post.url }}">…</a></p>
                     </article>
-
-                    <article class="story">
-                        <h3 class="story-headline">Solar Technology Fails for Local Band</h3>
-                        <p class="story-summary">California group abandons green energy experiment for stage amplifiers</p>
-                        <p class="story-text">A local band has given up on trying to be the first to use solar technology to power stage amplifiers. Bass player suggests that they have had little success using the technology for their nightly gigs.</p>
-                    </article>
-
-                    <article class="story">
-                        <h3 class="story-headline">Club Forces Outdoor Winter Shows</h3>
-                        <p class="story-summary">Local venue accused of scheduling performances in freezing weather</p>
-                        <p class="story-text">A local club owner is accused of trying to force bands to play in 0 degree weather at an outdoor venue. While the opening act "Homo Sapiens" refused to play, the later band "The Neanderthals" said they could care less.</p>
-                    </article>
-
-                    <article class="story">
-                        <h3 class="story-headline">Historic Building Becomes Studio</h3>
-                        <p class="story-summary">Imperfect Hosts signs lease for mid-1800s recording space</p>
-                        <p class="story-text">Imperfect hosts has signed a lease for a new recording studio. The building is historically significant as it was built in the mid 1800's. Build out is expected to take twenty years.</p>
-                    </article>
+{% endfor %}
                 </section>
             </div>
 
             <aside class="right-column">
                 <div class="sidebar">
                     <h3 class="sidebar-headline">Music Industry News</h3>
-                    
+{% assign sidebar_posts = site.posts | where:"section","sidebar" %}
+{% for post in sidebar_posts %}
                     <article class="sidebar-story">
-                        <h4 class="sidebar-story-headline">Vampire Bat Shelter Receives Donation</h4>
-                        <p class="sidebar-story-text">Imperfect Hosts are excited to announce a donation to a local animal shelter. The shelter specializes in providing care for injured vampire bats. Volunteers needed between 12 and 5 AM.</p>
+                        <h4 class="sidebar-story-headline"><a href="{{ post.url }}">{{ post.title }}</a></h4>
+                        <p class="sidebar-story-text">{{ post.excerpt | strip_html }}<a href="{{ post.url }}">…</a></p>
                     </article>
-
-                    <article class="sidebar-story">
-                        <h4 class="sidebar-story-headline">Super Vacuum Toilet Installed</h4>
-                        <p class="sidebar-story-text">After putting up with a clogged toilet for years, Imperfect hosts have recently purchased a new SUPER VACUUM Flush Toilet for their rehearsal space. Manufacturer suggests securing small pets prior to flushing.</p>
-                    </article>
-
-                    <article class="sidebar-story">
-                        <h4 class="sidebar-story-headline">Electric Shock Metronome Released</h4>
-                        <p class="sidebar-story-text">Get-shocked manufacturing has released a new metronome which provides a unique method of keeping any musician in time through small electric shocks on the downbeat.</p>
-                    </article>
-
-                    <article class="sidebar-story">
-                        <h4 class="sidebar-story-headline">Ice Cube Recycling Venture</h4>
-                        <p class="sidebar-story-text">A local Bass player has started a new company which hopes to recycle ice cubes by collecting them from bar glasses after gigs. Currently working on preventing melting overnight.</p>
-                    </article>
+{% endfor %}
                 </div>
             </aside>
         </main>
 
         <section class="bottom-stories">
+{% assign bottom_posts = site.posts | where:"section","bottom" %}
+{% for post in bottom_posts %}
             <article class="bottom-story">
-                <h3 class="bottom-headline">King Tortoise and the Hares Call It Quits</h3>
-                <p class="bottom-text">Local rock band "King Tortoise and the Hares" is calling it quits due to musical differences. Lead Singer King Tortoise complained: "I can't play with musicians and a drummer that rush every song". The Sloths expressed interest in working with the vocalist.</p>
+                <h3 class="bottom-headline"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                <p class="bottom-text">{{ post.excerpt | strip_html }}<a href="{{ post.url }}">…</a></p>
             </article>
-
-            <article class="bottom-story">
-                <h3 class="bottom-headline">The Espressos Accused of Short Sets</h3>
-                <p class="bottom-text">A Bar owner has accused local band "the espresso's" of not playing full sets. The band's drummer "ten aday" defended their commitment, noting they play 35 songs per one hour set.</p>
-            </article>
-
-            <article class="bottom-story">
-                <h3 class="bottom-headline">The Witches Debut Cauldron Stage Show</h3>
-                <p class="bottom-text">Crowds are going crazy over the new stage show by all female band "The Witches". The show features a cauldron of boiling hot oil in the center of the stage, which doubles as cooking equipment for the club's Friday fish special.</p>
-            </article>
-
-            <article class="bottom-story">
-                <h3 class="bottom-headline">Bass Player Uses 30,000 Watt Car Audio</h3>
-                <p class="bottom-text">A local Bass Player is thrilled to use his car audio system for gigs. The 30,000 watt system works perfectly for double duty, though bandmates complain about engine fumes.</p>
-            </article>
-
-            <article class="bottom-story">
-                <h3 class="bottom-headline">The Chameleons Consider Name Change</h3>
-                <p class="bottom-text">After 62 years of performing, lead singer "tongue davis" says the name no longer "fits" the band. The group has always been known for their unusual light show that makes members appear to be "changing colors".</p>
-            </article>
-
-            <article class="bottom-story">
-                <h3 class="bottom-headline">Band Sues Rugby Club Over Flyer Mix-Up</h3>
-                <p class="bottom-text">A local band is suing a college Rugby Club over event flyers which incorrectly listed their name as "Thunderthighs" instead of "Big Mama and the Bad Boy Angels". The Rugby Club has issued a public apology.</p>
-            </article>
+{% endfor %}
         </section>
     </div>
 </body>
