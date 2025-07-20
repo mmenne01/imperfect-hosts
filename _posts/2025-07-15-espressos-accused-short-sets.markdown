@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "The Espressos Accused of Short Sets"
 section: bottom
 date: 2025-07-15 00:00:00 -0500
