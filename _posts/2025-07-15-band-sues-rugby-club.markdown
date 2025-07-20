@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Band Sues Rugby Club Over Flyer Mix-Up"
 section: bottom
 date: 2025-07-15 00:00:00 -0500
