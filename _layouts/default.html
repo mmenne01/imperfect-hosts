@@ -369,6 +369,40 @@
             margin-bottom: 10px;
             font-weight: 700;
         }
+
+        /* Page Layout */
+        .page-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 15px;
+        }
+
+        .page-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 2px solid #e2e2e2;
+            padding-bottom: 10px;
+        }
+
+        .page-body {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .page-body table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .page-body th,
+        .page-body td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            text-align: left;
+        }
     </style>
 </head>
 <body>
@@ -387,10 +421,10 @@
 
             <nav class="main-nav">
                 <ul>
-                    <li><a href="#band-info">Band Info</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#music">Music</a></li>
-                    <li><a href="#dates">Dates</a></li>
+                    <li><a href="{{ '/band-info/' | relative_url }}">Band Info</a></li>
+                    <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
+                    <li><a href="{{ '/music/' | relative_url }}">Music</a></li>
+                    <li><a href="{{ '/dates/' | relative_url }}">Dates</a></li>
                 </ul>
             </nav>
 
