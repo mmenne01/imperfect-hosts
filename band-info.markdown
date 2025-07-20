@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Band Info
 permalink: /band-info/
 ---
