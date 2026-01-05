@@ -135,10 +135,11 @@
             font-family: 'Playfair Display', serif;
             font-size: 18px;
             font-weight: 600;
-            color: #000;
+            color: #326891;
             margin-top: 10px;
             margin-bottom: 10px;
             letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
         .date-weather-bar {

@@ -8,10 +8,10 @@ permalink: /band-info/
 
 Formed in 2020, **Imperfect Hosts** is a four-piece alternative rock group known for blending catchy melodies with lyrics about the day-to-day struggles of working musicians. The band consists of:
 
-- **Jamie Rivers** – vocals and guitar
-- **george forman** – lead guitar
-- **Morgan Cruz** – bass and backing vocals
-- **Taylor Kim** – drums
+- **Restless Doc** – vocals, keyboards, vocals
+- **She Dog** – lead guitar
+- **Big Greg** – bass and backing vocals
+- **Honest Dan** – drums
 
 ### History
 

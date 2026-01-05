@@ -4,3 +4,28 @@ _site
 .jekyll-metadata
 *.sw*
 vendor
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+*~
+.DS_Store
+Thumbs.db
+*.log
+
+# Editor temporary files
+*.swp
+*.swo
+*.swn
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS temporary files
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
