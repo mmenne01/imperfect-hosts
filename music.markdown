@@ -6,16 +6,18 @@ permalink: /music/
 
 ### Discography
 
-1. **Late Nights & Load-ins (EP, 2021)** – Featuring fan favorites "Spare Change" and "Loading Dock Lullaby".
-2. **Rent's Due (Single, 2022)** – A punchy anthem about juggling day jobs and late-night gigs.
-3. **Breakroom Daydreams (Single, 2023)** – A mellow track capturing the quiet moments between rehearsals.
+<br>
 
-A full-length album is currently in the works and is expected to release in 2025. Stay tuned for sneak peeks and studio updates.
+1. **Roadnoise Symphony (Single, 2025)** – Imperfect Hosts Old Car Road Anthem.
+2. **This Heart (Single, 2025)** – Imperfect Hosts afor the broken hearted.
+.
+
+A full-length album is currently in the works and is expected to release in 2026. Stay tuned for sneak peeks and studio updates.
+
+<br>
 
 ### Listen Online
+<br>
+Our music will be available on streaming platforms in early March 2026. 
 
-Our music is available on all major streaming platforms including [Spotify](https://open.spotify.com), [Apple Music](https://music.apple.com) and [Bandcamp](https://bandcamp.com).
 
-### Videos
-
-Check out live performances and behind-the-scenes clips on our [YouTube channel](https://youtube.com/imperfecthosts).

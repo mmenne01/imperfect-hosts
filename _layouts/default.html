@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+    <!-- Plyr CSS -->
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Georgia:wght@400;700&display=swap');
 
@@ -151,6 +155,98 @@
             border-top: 1px solid #e2e2e2;
             border-bottom: 1px solid #e2e2e2;
             margin-bottom: 20px;
+        }
+
+        /* Music Player */
+        .music-player-container {
+            background-color: #f8f8f8;
+            padding: 15px 0;
+            border-bottom: 2px solid #e2e2e2;
+            margin-bottom: 20px;
+        }
+
+        .music-player-wrapper {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .player-title {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 8px;
+            text-align: center;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .playlist {
+            margin-top: 15px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .playlist.active {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .playlist-toggle {
+            background: #326891;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            cursor: pointer;
+            display: block;
+            margin: 10px auto 0;
+            border-radius: 3px;
+            transition: background 0.2s ease;
+        }
+
+        .playlist-toggle:hover {
+            background: #254d6d;
+        }
+
+        .playlist-item {
+            padding: 10px 15px;
+            border-bottom: 1px solid #e2e2e2;
+            cursor: pointer;
+            transition: background 0.2s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .playlist-item:hover {
+            background-color: #fff;
+        }
+
+        .playlist-item.active {
+            background-color: #326891;
+            color: white;
+        }
+
+        .track-info {
+            flex: 1;
+        }
+
+        .track-title {
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .track-artist {
+            font-size: 11px;
+            opacity: 0.8;
+        }
+
+        .track-duration {
+            font-size: 11px;
+            opacity: 0.7;
         }
 
         .date-info {
@@ -413,25 +509,52 @@
             padding: 8px 12px;
             text-align: left;
         }
+
+        /* Checkbox list styling */
+        .page-body ul li input[type="checkbox"] {
+            margin-right: 10px;
+            border: 1px solid #000;
+            appearance: none;
+            -webkit-appearance: none;
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .page-body ul li input[type="checkbox"]:checked::before {
+            content: "✓";
+            position: absolute;
+            top: -2px;
+            left: 2px;
+            font-size: 14px;
+            color: #000;
+        }
+
+        .page-body ul li:has(input[type="checkbox"]) {
+            list-style-type: none;
+            margin-left: -20px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <header class="header">
             <div class="top-nav">
-                <div class="weather-date">Tuesday, July 15, 2025 | Today's Paper | Video | Most Popular</div>
+                <div class="weather-date">Monday, January 5, 2026</div>
                 <div class="subscription-info">Subscribe for $0.000/week</div>
             </div>
 
             <div class="masthead-container">
                 <h1 class="masthead">The Imperfect Hosts Times</h1>
                 <div class="sub-banner">Home of the Imperfect Hosts Band</div>
-                <div class="publication-info">VOL. I . . . No. 1 © Imhosts LLC 7/15/2025</div>
+                <div class="publication-info">VOL. I . . . No. 1 © Imhosts LLC 01/05/26</div>
                 <div class="tagline">News for working musicians Published almost weekly.</div>
             </div>
 
             <nav class="main-nav">
                 <ul>
+                    <li><a href="{{ '/' | relative_url }}">News</a></li>
                     <li><a href="{{ '/band-info/' | relative_url }}">Band Info</a></li>
                     <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
                     <li><a href="{{ '/music/' | relative_url }}">Music</a></li>
@@ -440,13 +563,115 @@
             </nav>
 
             <div class="date-weather-bar">
-                <div class="date-info">Tuesday, July 15, 2025</div>
-                <div class="weather-info">Music City | 72°F</div>
+                <div class="date-info">Monday, January 5, 2026</div>
+                <div class="weather-info"></div>
                 <div class="price-info">Late Edition | $0.000</div>
             </div>
         </header>
 
+        <!-- Music Player -->
+        <div class="music-player-container">
+            <div class="music-player-wrapper">
+                <div class="player-title">Whilst you are perusing . . . <span id="current-track">Select a track</span></div>
+                <audio id="player" controls>
+                    <source src="" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+                <button class="playlist-toggle" onclick="togglePlaylist()">VIEW PLAYLIST</button>
+                <div class="playlist" id="playlist">
+                    <!-- Playlist items will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
         {{ content }}
     </div>
+
+    <!-- Plyr JS -->
+    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+    <script>
+        // Initialize Plyr
+        const audioElement = document.getElementById('player');
+        const player = new Plyr('#player', {
+            controls: ['play', 'progress', 'current-time', 'mute', 'volume'],
+            settings: ['speed'],
+            speed: { selected: 1, options: [0.5, 0.75, 1, 1.25, 1.5, 2] }
+        });
+
+        // Playlist data - UPDATE THIS ARRAY WITH YOUR TRACKS
+        const tracks = [
+            {
+                title: "Roadnoise Symphony",
+                artist: "Imperfect Hosts",
+                duration: "3:45",
+                src: "/assets/audio/roadnoise symphony 103025r1.mp3"
+            },
+            {
+                title: "This Heart",
+                artist: "Imperfect Hosts",
+                duration: "3:37",
+                src: "/assets/audio/this heart 102925_r2.mp3"
+            }
+        ];
+
+        let currentTrackIndex = 0;
+
+        // Populate playlist
+        function populatePlaylist() {
+            const playlistEl = document.getElementById('playlist');
+            playlistEl.innerHTML = tracks.map((track, index) => `
+                <div class="playlist-item ${index === 0 ? 'active' : ''}" onclick="playTrack(${index})">
+                    <div class="track-info">
+                        <div class="track-title">${track.title}</div>
+                        <div class="track-artist">${track.artist}</div>
+                    </div>
+                    <div class="track-duration">${track.duration}</div>
+                </div>
+            `).join('');
+        }
+
+        // Play selected track
+        function playTrack(index) {
+            currentTrackIndex = index;
+            const track = tracks[index];
+
+            // Update audio source - encode the path properly
+            const encodedSrc = track.src.replace(/ /g, '%20');
+            audioElement.src = encodedSrc;
+            audioElement.load();
+
+            // Update current track display
+            document.getElementById('current-track').textContent = track.title;
+
+            // Update active state in playlist
+            document.querySelectorAll('.playlist-item').forEach((item, i) => {
+                item.classList.toggle('active', i === index);
+            });
+
+            // Play the track after a short delay
+            setTimeout(() => {
+                player.play().catch(err => {
+                    console.error('Error playing track:', err);
+                });
+            }, 100);
+        }
+
+        // Toggle playlist visibility
+        function togglePlaylist() {
+            const playlist = document.getElementById('playlist');
+            const button = document.querySelector('.playlist-toggle');
+            playlist.classList.toggle('active');
+            button.textContent = playlist.classList.contains('active') ? 'HIDE PLAYLIST' : 'VIEW PLAYLIST';
+        }
+
+        // Auto-play next track when current ends
+        audioElement.addEventListener('ended', () => {
+            currentTrackIndex = (currentTrackIndex + 1) % tracks.length;
+            playTrack(currentTrackIndex);
+        });
+
+        // Initialize playlist on page load
+        populatePlaylist();
+    </script>
 </body>
 </html>
