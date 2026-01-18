@@ -179,6 +179,11 @@
             letter-spacing: 1px;
         }
 
+        .player-disabled {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
         .playlist {
             margin-top: 15px;
             max-height: 0;
@@ -573,10 +578,12 @@
         <div class="music-player-container">
             <div class="music-player-wrapper">
                 <div class="player-title">Whilst you are perusing . . . <span id="current-track">Select a track</span></div>
-                <audio id="player" controls>
-                    <source src="" type="audio/mp3">
-                    Your browser does not support the audio element.
-                </audio>
+                <div id="player-container" class="player-disabled">
+                    <audio id="player" controls>
+                        <source src="" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
                 <button class="playlist-toggle" onclick="togglePlaylist()">VIEW PLAYLIST</button>
                 <div class="playlist" id="playlist">
                     <!-- Playlist items will be populated by JavaScript -->
@@ -634,6 +641,9 @@
         function playTrack(index) {
             currentTrackIndex = index;
             const track = tracks[index];
+
+            // Enable the player controls
+            document.getElementById('player-container').classList.remove('player-disabled');
 
             // Update audio source - encode the path properly
             const encodedSrc = track.src.replace(/ /g, '%20');
