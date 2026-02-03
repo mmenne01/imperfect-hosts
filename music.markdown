@@ -11,7 +11,7 @@ permalink: /music/
 1. **Roadnoise Symphony (Single, 2025)** – Imperfect Hosts Old Car Road Anthem.
 2. **This Heart (Single, 2025)** – Imperfect Hosts advice for the broken hearted.
 3. **We Could Do With Less of That (Single, 2025)** – Imperfect Hosts venting after a bad travel week.
-4. **My Feral Girlfriend (Single, 2025)** – Imperfect Hosts hero Charles Lucre gets a girlfriend. 
+4. **My Feral Girlfriend (Single, 2025)** – Imperfect Hosts luckless manboy Charles Lucre gets a girlfriend. 
 
 A full-length album is currently in the works and is expected to release in 2026. Stay tuned for sneak peeks and studio updates.
 
