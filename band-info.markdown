@@ -8,7 +8,7 @@ permalink: /band-info/
 
 <br>
 
-Formed in 2025, **Imperfect Hosts** is a four-piece Cenozoic Era rock group known for blending catchy melodies with lyrics about the day-to-day struggles of mankind. The band consists of:
+Formed in 2025, **Imperfect Hosts** is a four-piece Cenozoic Era rock group known for blending catchy melodies with lyrics about the day-to-day struggles. The band consists of:
 
 <br>
 
