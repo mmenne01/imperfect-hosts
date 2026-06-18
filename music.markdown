@@ -36,6 +36,6 @@ A full-length album is currently in the works and is expected to release in 2026
 
 ### Listen Online
 <br>
-Our music will be available on streaming platforms in early March 2026. 
+Our music will be available on streaming platforms starting July 2026.
 
 
