@@ -8,6 +8,14 @@ permalink: /music/
 
 <br>
 
+#### 2026
+
+1. **2nd Second Chance (Single, 2026)** – Imperfect Hosts always looking for situational mercy.
+
+
+<br>
+<br>
+
 #### 2025
 
 1. **Roadnoise Symphony (Single, 2025)** – Imperfect Hosts Old Car Road Anthem.
@@ -15,10 +23,6 @@ permalink: /music/
 3. **We Could Do With Less of That (Single, 2025)** – Imperfect Hosts venting after a bad travel week.
 4. **My Feral Girlfriend (Single, 2025)** – Imperfect Hosts luckless manboy Charles Lucre gets a girlfriend.
 5. **Too Much (Single, 2025)** – Imperfect Hosts overfilled garage commentary.
-
-#### 2026
-
-1. **2nd Second Chance (Single, 2026)** – Imperfect Hosts always looking for situational mercy.
 
 <br>
 
