@@ -13,6 +13,7 @@ permalink: /music/
 3. **We Could Do With Less of That (Single, 2025)** – Imperfect Hosts venting after a bad travel week.
 4. **My Feral Girlfriend (Single, 2025)** – Imperfect Hosts luckless manboy Charles Lucre gets a girlfriend.
 5. **Too Much (Single, 2025)** – Imperfect Hosts overfilled garage commentary.
+6. **2nd Second Chance (Single, 2026)** – Imperfect Hosts always looking for situational mercy.
 
 <br>
 
