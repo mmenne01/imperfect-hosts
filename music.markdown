@@ -10,6 +10,8 @@ permalink: /music/
 
 #### 2026
 
+<br>
+
 1. **2nd Second Chance (Single, 2026)** – Imperfect Hosts always looking for situational mercy.
 
 
@@ -17,6 +19,8 @@ permalink: /music/
 <br>
 
 #### 2025
+
+<br>
 
 1. **Roadnoise Symphony (Single, 2025)** – Imperfect Hosts Old Car Road Anthem.
 2. **This Heart (Single, 2025)** – Imperfect Hosts advice for the broken hearted.
