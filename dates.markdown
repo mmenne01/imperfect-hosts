@@ -10,6 +10,7 @@ permalink: /dates/
 |------|----------|------|------|
 | 3/27/26 | Ballwin VFW | 5 - 8 PM | Acoustic Show |
 | 4/26/26 | 4 Hands Peacemaker | 1 - 4 PM | Acoustic Show |
+| 9/4/26 | Savannahs - Cedar Hill | 7 - 10:30 PM | Big Show |
 | 10/3/26 | Private Party | TBD | Big Show |
 
 Check back often as we announce more shows throughout the year!
